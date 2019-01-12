@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+
+/* import for angular material styles */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+  margin: 0px;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}

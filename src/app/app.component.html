@@ -1,0 +1,38 @@
+<div class="web4Bpa-container">
+  <div class="web4Bpa-head-container">
+    <div class="web4Bpa-head-column">
+      <img class="pull-left img-responsive" 
+       src="http://cdn4bpa.non-bku.db.de/ajax/web4bpa/modules/base/images/Web4BPA.svg">
+    </div>
+    <div class="web4Bpa-head-column">
+      <img class="pull-right" 
+      src="http://cdn4bpa.non-bku.db.de/ajax/web4bpa/modules/base/images/DB-Netze.svg">
+    </div>
+  </div>
+  <div class="web4Bpa-head-seperator"></div>
+  <div class="web4Bpa-toolbar-container">
+    <div class="left-container">
+      <div class="web4Bpa-title">{{ title }}</div>
+    </div>
+    <div class="right-container toolbar-tab-color">
+      <nav mat-tab-nav-bar [backgroundColor]="tabs.background">
+        <a mat-tab-link *ngFor="let link of tabs.links"
+          (click)="tabs.activeLink = link"
+          [active]="tabs.activeLink == link" 
+          [routerLink]="link" 
+          >{{labelFunction(link)}}</a>
+      </nav>
+      
+      
+    </div>
+  </div>
+
+  <div class="web4Bpa-main-frame">
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+  </div>
+</div>
+
+
+
+
