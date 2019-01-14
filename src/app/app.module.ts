@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+
+// ng-bootstrap 4
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // app internal imports
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -37,7 +40,8 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule // bootstrap import
   ],
   providers: [],
   bootstrap: [AppComponent]

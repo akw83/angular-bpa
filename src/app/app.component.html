@@ -15,12 +15,19 @@
       <div class="web4Bpa-title">{{ title }}</div>
     </div>
     <div class="right-container toolbar-tab-color">
-      <nav>
+      <!-- <nav>
         <a *ngFor="let link of tabs.links"
           [routerLink]="link" 
           >{{labelFunction(link)}}</a>
-      </nav>
-      
+      </nav> -->
+      <ngb-tabset>
+        <ngb-tab title="first">
+
+        </ngb-tab>
+        <ngb-tab title="second">
+
+        </ngb-tab>
+      </ngb-tabset>
       
     </div>
   </div>
