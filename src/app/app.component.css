@@ -45,9 +45,3 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-.toolbar-height, .mat-toolbar-row, .mat-toolbar-single-row{
-  height: 42px;
-}
-:host /deep/ .toolbar-tab-color .mat-tab-nav-bar.mat-primary  .mat-ink-bar {
-  background-color: #F01414;
-}

@@ -15,10 +15,8 @@
       <div class="web4Bpa-title">{{ title }}</div>
     </div>
     <div class="right-container toolbar-tab-color">
-      <nav mat-tab-nav-bar [backgroundColor]="tabs.background">
-        <a mat-tab-link *ngFor="let link of tabs.links"
-          (click)="tabs.activeLink = link"
-          [active]="tabs.activeLink == link" 
+      <nav>
+        <a *ngFor="let link of tabs.links"
           [routerLink]="link" 
           >{{labelFunction(link)}}</a>
       </nav>

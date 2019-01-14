@@ -15,4 +15,11 @@ export class MessageService {
   clear(): void {
     this.messages = [];
   }
+
+  getLastMessage(): string {
+    if (this.messages.length = 0) {
+      return '';
+    }
+    return this.messages[this.messages.length - 1];
+  }
 }

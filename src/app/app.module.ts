@@ -16,9 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
-// angular material imports
-import { MatToolbarModule } from '@angular/material/toolbar'; // toolbar
-import { MatTabsModule } from '@angular/material/tabs'; // tabs
+
 
 @NgModule({
   declarations: [
@@ -39,9 +37,7 @@ import { MatTabsModule } from '@angular/material/tabs'; // tabs
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    ReactiveFormsModule,
-    MatToolbarModule,
-    MatTabsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
