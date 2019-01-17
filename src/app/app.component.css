@@ -45,3 +45,8 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+.toolbar-links {
+  color: rgb(58, 58, 58);
+  font-weight: bold;
+  font-size: 12pt;
+}

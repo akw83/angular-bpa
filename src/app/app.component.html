@@ -1,3 +1,4 @@
+<!-- Header -->
 <div class="web4Bpa-container">
   <div class="web4Bpa-head-container">
     <div class="web4Bpa-head-column">
@@ -14,24 +15,19 @@
     <div class="left-container">
       <div class="web4Bpa-title">{{ title }}</div>
     </div>
+    <!-- Toolbar -->
     <div class="right-container toolbar-tab-color">
-      <!-- <nav>
-        <a *ngFor="let link of tabs.links"
-          [routerLink]="link" 
-          >{{labelFunction(link)}}</a>
-      </nav> -->
       <ngb-tabset>
-        <ngb-tab title="first">
-
-        </ngb-tab>
-        <ngb-tab title="second">
-
+        <ngb-tab *ngFor="let link of tabs.links">
+          <ng-template ngbTabTitle>
+            <a [routerLink]="link" class="toolbar-links">{{labelFunction(link)}}</a>
+          </ng-template>
         </ngb-tab>
       </ngb-tabset>
-      
     </div>
   </div>
 
+  <!-- Main frame -->
   <div class="web4Bpa-main-frame">
     <router-outlet></router-outlet>
     <app-messages></app-messages>
