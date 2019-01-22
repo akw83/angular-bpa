@@ -5,14 +5,16 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { DispositionComponent } from './disposition/disposition.component';
 
 // define routes here...
 const routes: Routes = [
   {path: 'heroes', component: HeroesComponent},
   {path: 'dashboard', component: DashboardComponent },
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: '/disposition', pathMatch: 'full'},
   {path: 'detail/:id', component: HeroDetailComponent}, // colon (:) in the path indicates that :id is a placeholder for a specific hero id
-  {path: 'nameforms', component: NameEditorComponent}
+  {path: 'nameforms', component: NameEditorComponent},
+  {path: 'disposition', component: DispositionComponent}
 ];
 
 // ng generate module app-routing --flat --module=app

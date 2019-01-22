@@ -1,14 +1,25 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
-  messages: string[] = [];
+  private messages: string[] = [];
+  // EventEmitter
+  private messagePublishEvent: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
+
+  publishMessage(message: string) {
+    this.messagePublishEvent.emit(message);
+  }
+
+  getMessageEmmiter(): EventEmitter<string> {
+    return this.messagePublishEvent;
+  }
 
   add(message: string): void {
+    this.publishMessage(message);
     this.messages.push(message);
   }
 

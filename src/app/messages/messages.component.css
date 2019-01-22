@@ -33,3 +33,10 @@ button.clear {
   color: #888;
   margin-bottom: 12px;
 }
+.alert-bottom{
+  margin-left: 55%;
+  position: fixed;
+  bottom: 5px;
+  left:2%;
+  width: 96%;
+}

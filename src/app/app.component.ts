@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
-  routLinks = ['/dashboard', '/heroes', '/nameforms'];
+  routLinks = ['/disposition', '/dashboard', '/heroes', '/nameforms'];
 
   tabs: any = {
     background: '',
     links: this.routLinks,
     activeLink: this.routLinks[0],
-    label: ['/dashboard', '/heroes', '/nameforms']
+    label: this.routLinks
   };
 
   labelFunction (link: string): string {
