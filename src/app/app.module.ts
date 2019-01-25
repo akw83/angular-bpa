@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { DispositionComponent } from './disposition/disposition.component';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
+    AngularFontAwesomeModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,

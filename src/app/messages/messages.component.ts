@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { MessageService } from '../message.service';
 import { timeout } from 'rxjs/operators';
