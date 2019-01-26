@@ -13,6 +13,7 @@ export class DispositionComponent implements OnInit {
   dataPointsView: {name: string, coord: string, lastCoordinate: string[]}[];
   buttonModel = 'stop';
   timer: any;
+  trainDetail: Train;
 
   constructor() { }
 
@@ -39,6 +40,11 @@ export class DispositionComponent implements OnInit {
       this.startTimeFlow(3);
       console.log('--------------Simulation >> ! --------------');
     }
+  }
+
+  private createTrainDetails(train: Train): void {
+    this.trainDetail = train;
+    console.log('created details: ' + this.trainDetail.name);
   }
 
   // transform 1 set of train data -----------------------------
