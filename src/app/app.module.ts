@@ -18,6 +18,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { MessagesComponent } from './messages/messages.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { DispositionComponent } from './disposition/disposition.component';
+import { TestComponent } from './test/test.component';
 
 // ng-bootstrap 4
 // app internal imports
@@ -31,7 +32,8 @@ import { DispositionComponent } from './disposition/disposition.component';
     DashboardComponent,
     HeroSearchComponent,
     NameEditorComponent,
-    DispositionComponent
+    DispositionComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

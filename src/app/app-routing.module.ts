@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/disposition', pathMatch: 'full'},
   {path: 'detail/:id', component: HeroDetailComponent}, // colon (:) in the path indicates that :id is a placeholder for a specific hero id
   {path: 'nameforms', component: NameEditorComponent},
-  {path: 'disposition', component: DispositionComponent}
+  {path: 'disposition', component: DispositionComponent},
+  {path: 'test', component: TestComponent}
 ];
 
 // ng generate module app-routing --flat --module=app

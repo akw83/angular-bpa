@@ -7,13 +7,14 @@ h2 {
 .train-polyline {
     fill:none; 
     stroke:rgba(239, 148, 255, 0.815); 
-    stroke-width: 1.5;
+    stroke-width: 2;
     cursor: pointer;
     transition: transform .5s;
 }
+
 .train-polyline:hover {
     stroke: yellow;
-    stroke-width: 3
+    stroke-width: 4
 }
 .button-style{
     margin-right: 20px;

@@ -1,15 +1,5 @@
 <!-- Header -->
 <div class="web4Bpa-container">
-  <div class="web4Bpa-head-container">
-    <div class="web4Bpa-head-column">
-      <img class="pull-left img-responsive" 
-       src="../assets/Web4BPA.svg">
-    </div>
-    <div class="web4Bpa-head-column">
-      <img class="pull-right" 
-      src="../assets//DB-Netze.svg">
-    </div>
-  </div>
   <div class="web4Bpa-head-seperator"></div>
   <div class="web4Bpa-toolbar-container">
     <div class="left-container">
@@ -17,13 +7,6 @@
     </div>
     <!-- Toolbar -->
     <div class="right-container toolbar-tab-color">
-      <ngb-tabset>
-        <ngb-tab *ngFor="let link of tabs.links">
-          <ng-template ngbTabTitle>
-            <a [routerLink]="link" class="toolbar-links">{{labelFunction(link)}}</a>
-          </ng-template>
-        </ngb-tab>
-      </ngb-tabset>
     </div>
   </div>
 

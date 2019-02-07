@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Train } from '../train';
 import { TRAINS } from '../mock-trains';
+import { STATIONS } from './mocks/stations.mock';
+import { Station } from './business-objects/station';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-disposition',
@@ -15,13 +18,18 @@ export class DispositionComponent implements OnInit {
   timer: any;
   trainDetail: Train;
   counter: number;
+  stationPoints: Station[];
 
   constructor() { }
 
   ngOnInit() {
+    // set wheel listener on svg element
+    document.getElementById('center-view').addEventListener('wheel', this.scaleOnWheel);
+
     this.counter = 0;
     this.createTrainDataSet();
     this.createTrainDataSVG(this.trainData);
+    this.stationPoints = STATIONS;
   }
 
   /* controlls ---------------------------------------------------------- */
@@ -45,13 +53,7 @@ export class DispositionComponent implements OnInit {
     }
   }
 
-  private createTrainDetails(train: Train): void {
-    this.trainDetail = train;
-    console.log('created details: ' + this.trainDetail.name);
-  }
-
   /* TODO move all function below into a service! */
-
   // transform 1 set of train data -----------------------------
   private createPoint(name: string, coord: number[][]): {name: string, coord: string, lastCoordinate: string[]} {
     let coordAsString = '';
@@ -166,8 +168,34 @@ export class DispositionComponent implements OnInit {
   }
 
   /* add new train from view */
-  public addNewTrainOnView(event: any) {
-    return event;
+  public addNewTrainOnView(event: any): void {
+    if (event.ctrlKey !== true) {return; }
+    const newTrain: Train = new Train();
+    const trainCategory = (Math.round(Math.random()) === 0) ? 'ICE' : 'RB';
+    const trainNumber = Math.floor((Math.random() * 1000) + 1);
+
+    newTrain.name = `${trainCategory}${trainNumber}`;
+    newTrain.coordinates = [[event.clientX, -1 * event.clientY + 970]];
+    this.trainData.push(newTrain);
+    console.log(`${newTrain.name} added at: x:${newTrain.coordinates[0][0]}, y=${newTrain.coordinates[0][1]}`);
+
+    return;
+  }
+
+  public trackByFunction(index: number, item: any): number {
+    return item.id;
+  }
+
+  // -----------------------------------------------------------------------------
+  // ----------------------------- SCALE TEST ------------------------------------
+  // -----------------------------------------------------------------------------
+
+  public scaleOnWheel(event: WheelEvent) {
+    // const dispoViewBox = document.getElementById('dispo-view-box');
+    const centerViewBox = document.getElementById('center-view');
+    const eventObject = event;
+
+    return ;
   }
 
 }
