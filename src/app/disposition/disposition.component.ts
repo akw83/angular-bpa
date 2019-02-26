@@ -4,7 +4,6 @@ import { Train } from '../train';
 import { TRAINS } from '../mock-trains';
 import { STATIONS } from './mocks/stations.mock';
 import { Station } from './business-objects/station';
-import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-disposition',

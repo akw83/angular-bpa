@@ -1,0 +1,81 @@
+<div style="background-color: rgba(0,0,0,.08); height: 100%; width: 100%;" cdkDropListGroup>
+    <div class="backlog-container-todo">
+        <h3>ToDo</h3>
+      
+        <div
+          cdkDropList
+          [cdkDropListData]="all"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div
+            class="example-box"
+            *ngFor="let number of all"
+            cdkDrag>
+              <div class="box-template">
+                <span class="pull-left" style="color: white; margin-left: 5px;">{{'ICE ' + number}}</span>
+                <i class="fa fa-train pull-right train-icon"></i>
+              </div>
+              <div style="height: 70px; width: 100%; padding:10px;">
+
+              </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="backlog-container">
+      <h3>Vorfahrt</h3>
+      <div
+        cdkDropList
+        [cdkDropListData]="even"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div
+          class="example-box"
+          *ngFor="let number of even"
+          cdkDrag>
+            <div class="box-template-two">
+              <span class="pull-left" style="color: white; margin-left: 5px;">{{'ICE ' + number}}</span>
+              <i class="fa fa-train pull-right train-icon"></i>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="backlog-container">
+        <h3>Warten</h3>
+        <div
+          cdkDropList
+          [cdkDropListData]="two"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div
+            class="example-box"
+            *ngFor="let number of two"
+            cdkDrag>
+              <div class="box-template-three">
+                <span class="pull-left" style="color: white; margin-left: 5px;">{{'ICE ' + number}}</span>
+                <i class="fa fa-train pull-right train-icon"></i>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="backlog-container">
+        <h3>Wenden</h3>
+        <div
+          cdkDropList
+          [cdkDropListData]="three"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div
+            class="example-box"
+            *ngFor="let number of three"
+            cdkDrag>
+              <div class="box-template-forth">
+                <span class="pull-left" style="color: white; margin-left: 5px;">{{'ICE ' + number}}</span>
+                <i class="fa fa-train pull-right train-icon"></i>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>

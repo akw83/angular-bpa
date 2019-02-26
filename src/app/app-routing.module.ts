@@ -1,4 +1,3 @@
-import { TestComponent } from './test/test.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -7,6 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { DispositionComponent } from './disposition/disposition.component';
+import { SupaBoardComponent } from './supa-board/supa-board.component';
+import { D3jsComponent } from './d3js/d3js.component';
 
 // define routes here...
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'detail/:id', component: HeroDetailComponent}, // colon (:) in the path indicates that :id is a placeholder for a specific hero id
   {path: 'nameforms', component: NameEditorComponent},
   {path: 'disposition', component: DispositionComponent},
-  {path: 'test', component: TestComponent}
+  {path: 'd3js', component: D3jsComponent},
+  {path: 'supa-board', component: SupaBoardComponent}
 ];
 
 // ng generate module app-routing --flat --module=app

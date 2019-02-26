@@ -53,3 +53,10 @@
   font-weight: bold;
   font-size: 12pt;
 }
+
+.toolbar-buttons {
+  margin-left: 10px;
+  margin-top: 3px;
+  box-shadow: none;
+}
+

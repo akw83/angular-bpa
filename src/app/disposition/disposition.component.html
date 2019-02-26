@@ -14,12 +14,9 @@
             </g>>
             <!-- polylines for all trains -->
             <g *ngFor="let train of dataPointsView; trackBy: i; let i = index">
-                <polyline
-                [attr.points]="train.coord"
-                [attr.id]="i"
-                class="train-polyline">
-                <!-- tooltip -->
-                <title>{{'Zug: ' + train.name + ' aus Richtung...'}}</title>
+                <polyline [attr.points]="train.coord" [attr.id]="i" class="train-polyline">
+                    <!-- tooltip -->
+                    <title>{{'Zug: ' + train.name + ' aus Richtung...'}}</title>
                 </polyline>
                 <!-- red box for train names -->
                 <rect [attr.x]="train.lastCoordinate[0]-5" [attr.y]="train.lastCoordinate[1]-3" width="40" height="17"

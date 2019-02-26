@@ -3,10 +3,16 @@
   <div class="web4Bpa-head-seperator"></div>
   <div class="web4Bpa-toolbar-container">
     <div class="left-container">
-      <div class="web4Bpa-title">{{ title }}</div>
+        <div class="web4Bpa-title">{{ title }}</div>
     </div>
     <!-- Toolbar -->
     <div class="right-container toolbar-tab-color">
+        <a [routerLink]="['/disposition']" routerLinkActive="active" (click)="activateButton('disposition')" 
+            class="btn btn-outline-primary toolbar-buttons" role="button">Disposition</a>
+        <a [routerLink]="['/supa-board']" routerLinkActive="active" (click)="activateButton('supa-board')" 
+            class="btn btn-outline-primary toolbar-buttons" role="button">Supaboard</a>
+        <a [routerLink]="['/d3js']" routerLinkActive="active" (click)="activateButton('d3js')" 
+            class="btn btn-outline-primary toolbar-buttons" role="button">D3js</a>
     </div>
   </div>
 

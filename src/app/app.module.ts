@@ -7,6 +7,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { DispositionComponent } from './disposition/disposition.component';
 import { TestComponent } from './test/test.component';
+import { SupaBoardComponent } from './supa-board/supa-board.component';
+import { D3jsComponent } from './d3js/d3js.component';
 
 // ng-bootstrap 4
 // app internal imports
@@ -33,7 +36,9 @@ import { TestComponent } from './test/test.component';
     HeroSearchComponent,
     NameEditorComponent,
     DispositionComponent,
-    TestComponent
+    TestComponent,
+    SupaBoardComponent,
+    D3jsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import { TestComponent } from './test/test.component';
       InMemoryDataService, { dataEncapsulation: false }
     ),
     ReactiveFormsModule,
-    NgbModule // bootstrap import
+    NgbModule, // bootstrap import
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
