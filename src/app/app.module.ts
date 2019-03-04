@@ -1,4 +1,4 @@
-// core imports
+// Core Imports
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,7 +9,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
-import { AppRoutingModule } from './app-routing.module';
+// Components, Directives, Services ...
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -21,10 +21,16 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
 import { DispositionComponent } from './disposition/disposition.component';
 import { TestComponent } from './test/test.component';
 import { SupaBoardComponent } from './supa-board/supa-board.component';
-import { D3jsComponent } from './d3js/d3js.component';
+import { CollidingNodesComponent } from './d3/colliding-nodes/colliding-nodes.component';
+import { NodesExampleComponent } from './d3/nodes-example/nodes-example.component';
+import { NodeVisualComponent } from './d3/node-visual/node-visual.component';
+import { LinkVisualComponent } from './d3/link-visual/link-visual.component';
+import { ZoomableDirective } from './d3/directives/zoomable.directive';
+import { DraggableDirective } from './d3/directives/draggable.directive';
 
-// ng-bootstrap 4
-// app internal imports
+// Applications modules
+import { AppRoutingModule } from './app-routing.module';
+import { D3ZoomModule } from './d3-zoom/d3-zoom.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,12 @@ import { D3jsComponent } from './d3js/d3js.component';
     DispositionComponent,
     TestComponent,
     SupaBoardComponent,
-    D3jsComponent
+    CollidingNodesComponent,
+    NodesExampleComponent,
+    NodeVisualComponent,
+    LinkVisualComponent,
+    ZoomableDirective,
+    DraggableDirective
   ],
   imports: [
     BrowserModule,
@@ -52,7 +63,8 @@ import { D3jsComponent } from './d3js/d3js.component';
     ),
     ReactiveFormsModule,
     NgbModule, // bootstrap import
-    DragDropModule
+    DragDropModule,
+    D3ZoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

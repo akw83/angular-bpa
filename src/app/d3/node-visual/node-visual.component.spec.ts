@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { D3jsComponent } from './d3js.component';
+import { NodeVisualComponent } from './node-visual.component';
 
-describe('D3jsComponent', () => {
-  let component: D3jsComponent;
-  let fixture: ComponentFixture<D3jsComponent>;
+describe('NodeVisualComponent', () => {
+  let component: NodeVisualComponent;
+  let fixture: ComponentFixture<NodeVisualComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ D3jsComponent ]
+      declarations: [ NodeVisualComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(D3jsComponent);
+    fixture = TestBed.createComponent(NodeVisualComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

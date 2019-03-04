@@ -7,7 +7,9 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { DispositionComponent } from './disposition/disposition.component';
 import { SupaBoardComponent } from './supa-board/supa-board.component';
-import { D3jsComponent } from './d3js/d3js.component';
+import { CollidingNodesComponent } from './d3/colliding-nodes/colliding-nodes.component';
+import { PanZoomComponent } from './d3-zoom/pan-zoom/pan-zoom.component';
+import { BrushZoomComponent } from './d3-zoom/brush-zoom/brush-zoom.component';
 
 // define routes here...
 const routes: Routes = [
@@ -17,8 +19,10 @@ const routes: Routes = [
   {path: 'detail/:id', component: HeroDetailComponent}, // colon (:) in the path indicates that :id is a placeholder for a specific hero id
   {path: 'nameforms', component: NameEditorComponent},
   {path: 'disposition', component: DispositionComponent},
-  {path: 'd3js', component: D3jsComponent},
-  {path: 'supa-board', component: SupaBoardComponent}
+  {path: 'colliding-nodes', component: CollidingNodesComponent},
+  {path: 'supa-board', component: SupaBoardComponent},
+  {path: 'pan-zoom', component: PanZoomComponent},
+  {path: 'brush-zoom', component: BrushZoomComponent}
 ];
 
 // ng generate module app-routing --flat --module=app
