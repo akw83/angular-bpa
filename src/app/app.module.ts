@@ -31,6 +31,7 @@ import { DraggableDirective } from './d3/directives/draggable.directive';
 // Applications modules
 import { AppRoutingModule } from './app-routing.module';
 import { D3ZoomModule } from './d3-zoom/d3-zoom.module';
+import { ActionBoardModule } from './action-board/action-board.module';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { D3ZoomModule } from './d3-zoom/d3-zoom.module';
     ReactiveFormsModule,
     NgbModule, // bootstrap import
     DragDropModule,
-    D3ZoomModule
+    D3ZoomModule,
+    ActionBoardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

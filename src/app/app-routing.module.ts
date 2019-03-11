@@ -10,6 +10,7 @@ import { SupaBoardComponent } from './supa-board/supa-board.component';
 import { CollidingNodesComponent } from './d3/colliding-nodes/colliding-nodes.component';
 import { PanZoomComponent } from './d3-zoom/pan-zoom/pan-zoom.component';
 import { BrushZoomComponent } from './d3-zoom/brush-zoom/brush-zoom.component';
+import { ActionBoardComponent } from './action-board/action-board.component';
 
 // define routes here...
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'colliding-nodes', component: CollidingNodesComponent},
   {path: 'supa-board', component: SupaBoardComponent},
   {path: 'pan-zoom', component: PanZoomComponent},
-  {path: 'brush-zoom', component: BrushZoomComponent}
+  {path: 'brush-zoom', component: BrushZoomComponent},
+  {path: 'action-board', component: ActionBoardComponent}
 ];
 
 // ng generate module app-routing --flat --module=app

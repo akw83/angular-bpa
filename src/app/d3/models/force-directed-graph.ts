@@ -58,7 +58,7 @@ export class ForceDirectedGraph {
          // updating the central force for the simulation
         this.simulation.force('centers', d3.forceCenter(options.width / 2, options.height / 2));
 
-        // restartthe simulation internal timer
+        // restart the simulation internal timer
         this.simulation.restart();
     }
 
